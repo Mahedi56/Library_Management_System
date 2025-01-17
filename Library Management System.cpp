@@ -3,7 +3,7 @@
 
 //Libraries
 #include<iostream> 
-#include<conio.h>
+#include<stdio.h>
 #include<string>
 
 using namespace std;
@@ -91,7 +91,7 @@ else{
 	main();  //function call to self(main)
 }
 	
-_getch();
+cin.get();
 return 0;
 }
 
@@ -118,12 +118,12 @@ void addBook(int counter){
 		books[counter].setPublication(publication);	
 		increment(counter);	//calling function to increment counter
 		cout<<"\nBOOK ADDED SUCCESSFULLY!\n\nPress any key to continue . . .";
-		_getch();
+		cin.get();
 		main();
 	}
 	else{
 		cout<<"YOU HAVE REACHED THE MAXIMUM NUMBER OF BOOKS TOBE ADDED!\n\nPress any key to continue . . .";
-		_getch();
+		cin.get();
 		main();
 	}
 }
@@ -135,7 +135,7 @@ void deleteBook(int counter){
 	cout<<"DELETE BOOK\n\n";
 	if(counter==0){
 		cout<<"THERE IS NO BOOK TO DELETE!\n\nPress any key to continue . . .";
-		_getch();
+		cin.get();
 		main();
 	}
 	cout<<"Enter ISBN: ";
@@ -164,7 +164,7 @@ void deleteBook(int counter){
 				books[9].setPublication("");
 				decrement(counter); //calling function to decrement counter
 				cout<<"\nBOOK SUCCESSFULLY DELETED!\n\nPress any key to continue . . .";
-				_getch();
+				cin.get();
 				main();
 			}
 			else{
@@ -173,7 +173,7 @@ void deleteBook(int counter){
 		}
 	}
 	cout<<"\nBOOK NOT FOUND!\n\nPress any key to continue . . .";
-	_getch();
+	cin.get();
 	main();
 	
 }
@@ -184,7 +184,7 @@ void editBook(int counter){
 	cout<<"\nEDIT BOOK\n\n";
 	if(counter==0){
 		cout<<"THERE IS NO BOOK TO EDIT!\n\nPress any key to continue . . .";
-		_getch();
+		cin.get();
 		main();
 	}
 	cout<<"Enter ISBN: ";
@@ -218,7 +218,7 @@ void editBook(int counter){
 				books[i].setEdition(edition);
 				books[i].setPublication(publication);	
 				cout<<"\nBOOK EDITED SUCCESSFULLY!\n\nPress any key to continue . . .";
-				_getch();
+				cin.get();
 				editBook(counter);//function call to self
 			}
 			else{
@@ -227,7 +227,7 @@ void editBook(int counter){
 		}
 }
 	cout<<"\nBOOK NOT FOUND!\n\nPress any key to continue . . .";
-	_getch();
+	cin.get();
 	main();
 }
 void searchBook(int counter){
@@ -237,7 +237,7 @@ void searchBook(int counter){
 	cout<<"SEARCH BOOK\n\n";
 	if(counter==0){
 		cout<<"THERE IS NO BOOK TO SEARCH!\n\nPress any key to continue . . .";
-		_getch();
+		cin.get();
 		main();
 	}
 	cout<<"Enter ISBN: ";
@@ -256,13 +256,13 @@ void searchBook(int counter){
 	}
 	if(print){
 		cout<<"\n\nPress any key to continue . . .";
-		_getch();
+		cin.get();
 		main();
 	}
 	//if there's no book found
 	else{
 		cout<<"\nBOOK NOT FOUND!\n\nPress any key to continue . . .";
-		_getch();
+		cin.get();
 		main();		
 	}
 }
@@ -278,12 +278,12 @@ void viewAllBooks(int counter){
 		cout<<"PUBLICATION: "<<books[i].getPublication()<<endl<<endl;
 	}
 	cout<<"Press any key to continue . . .";
-	_getch();
+	cin.get();
 	main();
 }
 void quit(){
 	//quit function
-	_exit(1);
+	cin.get();
 }
 
 
